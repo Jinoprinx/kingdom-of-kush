@@ -3,6 +3,7 @@
 
 import { useEffect, useRef } from 'react';
 import Link from 'next/link';
+import HeroBackgroundVideo from '@/components/HeroBackgroundVideo';
 
 export default function HomePage() {
   const viewTriggers = useRef<NodeListOf<HTMLElement> | null>(null);
@@ -57,32 +58,25 @@ export default function HomePage() {
             <div className="flex items-center gap-3">
               <a href="/" className="flex items-center gap-3">
                 <img
-                  src="/images/kush-logo.jpg"        // ← your logo path
+                  src="/images/kush.jpg"        // ← your logo path
                   alt="Kingdom of Kush logo"
-                  className="w-9 h-auto" // adjust size as needed
+                  className="w-50 h-auto" // adjust size as needed
                 />
-                <span className="text-xl font-bold tracking-tight text-white font-playfair hidden sm:block">
-                  <img
-                    src="/images/kush.jpg"
-                    alt="Kingdom of Kush"
-                    className="w-50 h-auto"
-                  />
-                </span>
               </a>
             </div>
             <nav className="hidden lg:flex items-center space-x-1">
-              <a href="#vision" onClick={handleAnchorClick} className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-[#C5A059] transition-all duration-200">
-                Vision
-              </a>
+              <Link href="/about" className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-[#C5A059] transition-all duration-200">
+                About
+              </Link>
               <a href="#districts" onClick={handleAnchorClick} className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-[#C5A059] transition-all duration-200">
                 Districts
               </a>
               <a href="#invest" onClick={handleAnchorClick} className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-[#C5A059] transition-all duration-200">
                 Invest
               </a>
-              <a href="#citizenship" onClick={handleAnchorClick} className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-[#C5A059] transition-all duration-200">
+              <Link href="/citizenship" className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-[#C5A059] transition-all duration-200">
                 Citizenship
-              </a>
+              </Link>
             </nav>
             <div className="flex items-center space-x-3">
               <a
@@ -113,10 +107,8 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section id="vision" className="relative lg:pt-32 lg:pb-32 overflow-hidden view-trigger view-active pt-28 pb-20" data-view-class="view-active">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute top-0 right-0 w-3/4 h-3/4 bg-[#D80000] rounded-full opacity-[0.08] blur-[120px] animate-pulse"></div>
-          <div className="absolute bottom-0 left-0 w-1/2 h-1/2 bg-[#C5A059] rounded-full opacity-[0.05] blur-[100px]"></div>
-        </div>
+        {/* Hero Background Video */}
+        <HeroBackgroundVideo />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-5xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#C5A059]/30 bg-[#C5A059]/10 text-[#C5A059] text-xs font-medium mb-8 animate-[fadeIn_1s_ease-out]">
@@ -159,7 +151,7 @@ export default function HomePage() {
           <div className="mt-16 sm:mt-24 relative animate-[fadeIn_1.5s_ease-out_0.8s_forwards] opacity-0">
             <div className="aspect-[21/9] rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-[#D80000]/10 group">
               <img
-                src="https://images.unsplash.com/photo-1518091043644-c1d4457512c6?q=80&w=2831&auto=format&fit=crop"
+                src="/images/kush7.jpg"
                 alt="Futuristic African City Concept"
                 className="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-[2s]"
               />
@@ -222,7 +214,7 @@ export default function HomePage() {
                 <div className="grid lg:grid-cols-2 gap-0">
                   <div className="h-[400px] lg:h-[600px] overflow-hidden relative">
                     <img
-                      src="https://images.unsplash.com/photo-1544984243-ec57ea16fe25?q=80&w=2787&auto=format&fit=crop"
+                      src="/images/kush6.jpg"
                       alt="Nile River Estates"
                       className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                     />
@@ -276,7 +268,7 @@ export default function HomePage() {
                 <div className="grid lg:grid-cols-2 gap-0">
                   <div className="h-[400px] lg:h-[600px] overflow-hidden relative order-1 lg:order-2">
                     <img
-                      src="https://images.unsplash.com/photo-1486325212027-8081e485255e?q=80&w=2940&auto=format&fit=crop"
+                      src="/images/kush11.jpg"
                       alt="Trade District"
                       className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                     />
@@ -451,7 +443,7 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                img: 'https://images.unsplash.com/photo-1596237563267-8453ea8c6a99?q=80&w=2940&auto=format&fit=crop',
+                img: '/images/kush5.jpg',
                 tag: 'Infrastructure',
                 date: 'Oct 12, 2025',
                 title: 'Solar Grid Completion',
@@ -465,7 +457,7 @@ export default function HomePage() {
                 desc: 'Welcoming the first cohort of students from across the diaspora to our center of African excellence.',
               },
               {
-                img: 'https://images.unsplash.com/photo-1444703686981-a3abbc4d4fe3?q=80&w=2940&auto=format&fit=crop',
+                img: '/images/kush6.jpg',
                 tag: 'Economy',
                 date: 'Sep 15, 2025',
                 title: 'Agro-Tech Investments',
