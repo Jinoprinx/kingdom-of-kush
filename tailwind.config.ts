@@ -11,8 +11,9 @@ const config: Config = {
     extend: {
       colors: {
         kushRed: "#D80000",
-        kushBlack: "#050505",
+        kushBlack: "#1A1A1A",
         kushGold: "#C5A059",
+        kushCream: "#F9F9F7",
       },
       fontFamily: {
         playfair: ['var(--font-playfair)', 'serif'],

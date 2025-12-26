@@ -15,11 +15,12 @@ const TwitterIcon = () => (
 export default function Footer() {
     return (
         // The animation classes 'view-trigger' will be handled by the wrapper component
-        <footer className="bg-kushBlack border-[#222] border-t pt-20 pb-10">
+        // Kept dark for contrast against the light theme (Classic Luxury)
+        <footer className="bg-kushBlack border-t border-[#C5A059]/20 pt-20 pb-10">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 {/* --- Main Footer Content --- */}
                 {/* The 'view-transition' class will be added via the wrapper for animation */}
-                <div> 
+                <div>
                     <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16">
                         {/* Logo and Description */}
                         <div className="lg:col-span-2">
@@ -29,7 +30,7 @@ export default function Footer() {
                                 </div>
                                 <span className="text-lg font-bold text-white font-playfair">Kingdom of <span className="text-[#C5A059]">Kush</span></span>
                             </div>
-                            <p className="text-gray-500 max-w-sm mb-8 leading-relaxed">
+                            <p className="text-gray-400 max-w-sm mb-8 leading-relaxed">
                                 Establishing a modern, sustainable, and sovereign nation for the African diaspora. A center for trade, culture, and innovation.
                             </p>
                             {/* Social Links */}
@@ -73,11 +74,11 @@ export default function Footer() {
                     <div className="border-t border-white/5 pt-8">
                         <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
                             <div className="text-center lg:text-left">
-                                <p className="text-gray-600 text-sm">© 2025 Kingdom of Kush. All rights reserved.</p>
+                                <p className="text-gray-500 text-sm">© 2025 Kingdom of Kush. All rights reserved.</p>
                             </div>
                             <div className="flex items-center space-x-6 text-sm">
-                                <a href="#" className="text-gray-600 hover:text-white transition-colors duration-200">Privacy Policy</a>
-                                <a href="#" className="text-gray-600 hover:text-white transition-colors duration-200">Terms of Service</a>
+                                <a href="#" className="text-gray-500 hover:text-white transition-colors duration-200">Privacy Policy</a>
+                                <a href="#" className="text-gray-500 hover:text-white transition-colors duration-200">Terms of Service</a>
                             </div>
                         </div>
                     </div>

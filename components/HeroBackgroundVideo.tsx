@@ -37,7 +37,7 @@ export default function HeroBackgroundVideo() {
   return (
     <div className="absolute inset-0 z-0">
       {/* Solid fallback background while video loads or fails */}
-      <div className="absolute inset-0 bg-[#0a0a0a]" aria-hidden="true"></div>
+      <div className="absolute inset-0 bg-[#F9F9F7]" aria-hidden="true"></div>
 
       {/* Optimized, lazy-loaded video */}
       <video

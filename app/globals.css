@@ -4,7 +4,15 @@
 :root {
   --kush-red: #D80000;
   --kush-gold: #C5A059;
-  --kush-black: #0a0a0a;
+  --kush-black: #1A1A1A;
+  --kush-cream: #F9F9F7;
+  --foreground-rgb: 26, 26, 26;
+  --background-rgb: 249, 249, 247;
+}
+
+body {
+  color: var(--kush-black);
+  background: var(--kush-cream);
 }
 
 .text-gold { color: var(--kush-gold); }

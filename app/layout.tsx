@@ -20,8 +20,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${jakarta.variable} ${inter.variable} antialiased text-gray-100 bg-[#0a0a0a] overflow-x-hidden`}>
+    <html lang="en">
+      <body className={`${jakarta.variable} ${inter.variable} antialiased text-[#1A1A1A] bg-[#F9F9F7] overflow-x-hidden`}>
         {children}
         {/* Lucide Icons via CDN (or install @lucide/react for better perf) */}
         <Script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" strategy="afterInteractive" />

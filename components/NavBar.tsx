@@ -7,13 +7,13 @@ import { motion } from 'framer-motion';
 export default function NavBar() {
   return (
     <div className="w-full relative z-50">
-      {/* Top Red Bar */}
+      {/* Top Red Bar - Updated tokens for bright theme if used elsewhere */}
       <div className="bg-kushRed text-white py-4 px-6 flex justify-between items-center shadow-lg">
         {/* Placeholder for Logo - In real app, use <Image /> */}
         <div className="flex items-center gap-4 absolute left-1/2 transform -translate-x-1/2 top-2 md:top-0">
-           <div className="bg-kushBlack p-2 rounded-b-lg shadow-xl border-b-2 border-kushGold">
-             <span className="text-2xl font-serif font-bold text-kushGold tracking-widest">KUSH</span>
-           </div>
+          <div className="bg-white p-2 rounded-b-lg shadow-xl border-b-2 border-kushGold">
+            <span className="text-2xl font-serif font-bold text-kushGold tracking-widest">KUSH</span>
+          </div>
         </div>
 
         {/* Desktop Nav */}

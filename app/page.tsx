@@ -45,36 +45,36 @@ export default function HomePage() {
   };
 
   return (
-    <div>
-      {/* Aura Background */}
-      <div className="aura-background-component top-0 w-full h-screen -z-10 absolute opacity-30 pointer-events-none">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-[#1a0505] to-[#0a0a0a]"></div>
-      </div>
-
+    <div className="bg-[#F9F9F7] text-[#1A1A1A]">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 z-50 animate-[fadeIn_0.8s_ease-out_0.2s_forwards] bg-[#0a0a0a]/80 border-white/5 border-b backdrop-blur-md">
+      <header className="fixed top-0 left-0 right-0 z-50 animate-[fadeIn_0.8s_ease-out_0.2s_forwards] bg-white/80 border-b border-[#C5A059]/20 backdrop-blur-md shadow-sm">
         <div className="sm:px-6 lg:px-8 max-w-7xl mr-auto ml-auto pr-4 pl-4">
           <div className="flex lg:h-24 h-20 items-center justify-between">
             <div className="flex items-center gap-3">
               <a href="/" className="flex items-center gap-3">
                 <img
-                  src="/images/kush.jpg"        // ← your logo path
+                  src="/images/kush-logo.jpg"
                   alt="Kingdom of Kush logo"
-                  className="w-50 h-auto" // adjust size as needed
+                  className="w-10 h-auto"
                 />
               </a>
+              <img
+                src="/images/kush.jpg"
+                alt="Kingdom of Kush"
+                className="w-50 h-auto"
+              />
             </div>
             <nav className="hidden lg:flex items-center space-x-1">
-              <Link href="/about" className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-[#C5A059] transition-all duration-200">
+              <Link href="/about" className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#C5A059] transition-all duration-200">
                 About
               </Link>
-              <a href="#districts" onClick={handleAnchorClick} className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-[#C5A059] transition-all duration-200">
+              <a href="#districts" onClick={handleAnchorClick} className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#C5A059] transition-all duration-200">
                 Districts
               </a>
-              <a href="#invest" onClick={handleAnchorClick} className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-[#C5A059] transition-all duration-200">
+              <a href="#invest" onClick={handleAnchorClick} className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#C5A059] transition-all duration-200">
                 Invest
               </a>
-              <Link href="/citizenship" className="px-4 py-2 text-sm font-medium text-gray-300 hover:text-[#C5A059] transition-all duration-200">
+              <Link href="/citizenship" className="px-4 py-2 text-sm font-medium text-gray-700 hover:text-[#C5A059] transition-all duration-200">
                 Citizenship
               </Link>
             </nav>
@@ -82,7 +82,7 @@ export default function HomePage() {
               <a
                 href="#join"
                 onClick={handleAnchorClick}
-                className="hidden sm:inline-flex items-center space-x-2 bg-[#D80000] text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-[#b30000] hover:shadow-[0_0_20px_rgba(216,0,0,0.4)] transition-all duration-300 border border-white/10"
+                className="hidden sm:inline-flex items-center space-x-2 bg-[#D80000] text-white px-5 py-2.5 rounded-full text-sm font-medium hover:bg-[#b30000] hover:shadow-[0_0_20px_rgba(216,0,0,0.4)] transition-all duration-300 border border-transparent shadow-lg"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-passport w-4 h-4">
                   <path d="M2 20h20"></path>
@@ -93,7 +93,7 @@ export default function HomePage() {
                 </svg>
                 <span>Join the Kingdom</span>
               </a>
-              <button className="lg:hidden p-2 rounded-full text-white hover:bg-white/10 transition-colors duration-200">
+              <button className="lg:hidden p-2 rounded-full text-gray-900 hover:bg-black/5 transition-colors duration-200">
                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-menu w-6 h-6">
                   <path d="M4 5h16"></path>
                   <path d="M4 12h16"></path>
@@ -107,30 +107,35 @@ export default function HomePage() {
 
       {/* Hero Section */}
       <section id="vision" className="relative lg:pt-32 lg:pb-32 overflow-hidden view-trigger view-active pt-28 pb-20" data-view-class="view-active">
-        {/* Hero Background Video */}
+        {/* Updated Overlay for Bright Theme */}
+        <div className="absolute inset-0 bg-white/40 z-[1] backdrop-blur-[2px]"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-white/50 to-[#F9F9F7] z-[1]"></div>
+
         <HeroBackgroundVideo />
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-5xl mx-auto">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#C5A059]/30 bg-[#C5A059]/10 text-[#C5A059] text-xs font-medium mb-8 animate-[fadeIn_1s_ease-out]">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#C5A059]/40 bg-white/80 text-[#C5A059] text-xs font-medium mb-8 animate-[fadeIn_1s_ease-out] shadow-sm backdrop-blur-md">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#C5A059] opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-[#C5A059]"></span>
               </span>
               The Future of African Civilization
             </div>
-            <h1 className="sm:text-6xl lg:text-8xl xl:text-9xl leading-tight animate-[slideUp_1s_ease-out_0.2s_forwards] transform text-5xl font-bold tracking-tight opacity-0 translate-y-8 text-white font-playfair">
+            {/* Added drop shadow to text for readability against light video overlay if needed */}
+            <h1 className="sm:text-6xl lg:text-8xl xl:text-9xl leading-tight animate-[slideUp_1s_ease-out_0.2s_forwards] transform text-5xl font-bold tracking-tight opacity-0 translate-y-8 text-[#1A1A1A] font-playfair drop-shadow-sm">
               Welcome
               <br />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#C5A059] via-[#E5C079] to-[#C5A059] italic pr-2">Home.</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#C5A059] via-[#b89145] to-[#C5A059] italic pr-2">Home.</span>
             </h1>
-            <p className="mt-8 max-w-2xl mx-auto text-lg sm:text-xl lg:text-2xl text-gray-400 leading-relaxed opacity-0 animate-[slideUp_1s_ease-out_0.4s_forwards] transform translate-y-8 font-light">
+            <p className="mt-8 max-w-2xl mx-auto text-lg sm:text-xl lg:text-2xl text-gray-700 leading-relaxed opacity-0 animate-[slideUp_1s_ease-out_0.4s_forwards] transform translate-y-8 font-light drop-shadow-sm">
               The Kingdom of Kush invites the African diaspora to live, learn, work, invest, and prosper. A sovereign smart nation defining tomorrow&apos;s lifestyle.
             </p>
             <div className="flex flex-col sm:flex-row sm:space-y-0 sm:space-x-6 animate-[slideUp_1s_ease-out_0.6s_forwards] transform opacity-0 mt-12 translate-y-8 space-y-4 items-center justify-center">
               <a
                 href="#invest"
                 onClick={handleAnchorClick}
-                className="relative inline-flex items-center justify-center gap-2 overflow-hidden transition-all duration-300 group ring-1 ring-[#D80000] text-base font-semibold text-white tracking-tight bg-[#D80000] rounded-full pt-4 pr-8 pb-4 pl-8 shadow-[0_0_30px_rgba(216,0,0,0.3)] hover:shadow-[0_0_50px_rgba(216,0,0,0.5)] hover:scale-105"
+                className="relative inline-flex items-center justify-center gap-2 overflow-hidden transition-all duration-300 group ring-1 ring-[#D80000] text-base font-semibold text-white tracking-tight bg-[#D80000] rounded-full pt-4 pr-8 pb-4 pl-8 shadow-[0_10px_30px_rgba(216,0,0,0.3)] hover:shadow-[0_10px_40px_rgba(216,0,0,0.4)] hover:scale-105"
               >
                 <span className="relative z-[1]">Start Your Journey</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="relative z-[1] w-4 h-4 group-hover:translate-x-1 transition-transform">
@@ -141,7 +146,7 @@ export default function HomePage() {
               <a
                 href="#vision"
                 onClick={handleAnchorClick}
-                className="group inline-flex items-center space-x-3 hover:text-white hover:border-[#C5A059] hover:bg-[#C5A059]/10 transition-all duration-300 text-gray-300 border-white/20 border rounded-full pt-4 pr-8 pb-4 pl-8 backdrop-blur-sm"
+                className="group inline-flex items-center space-x-3 hover:text-[#C5A059] hover:bg-white transition-all duration-300 text-gray-800 border-gray-400/50 hover:border-[#C5A059] border rounded-full pt-4 pr-8 pb-4 pl-8 bg-white/40 backdrop-blur-md shadow-sm"
               >
                 <span>Explore the Vision</span>
               </a>
@@ -149,13 +154,13 @@ export default function HomePage() {
           </div>
 
           <div className="mt-16 sm:mt-24 relative animate-[fadeIn_1.5s_ease-out_0.8s_forwards] opacity-0">
-            <div className="aspect-[21/9] rounded-3xl overflow-hidden border border-white/10 shadow-2xl shadow-[#D80000]/10 group">
+            <div className="aspect-[21/9] rounded-3xl overflow-hidden border border-[#C5A059]/20 shadow-2xl shadow-[#C5A059]/10 group bg-white">
               <img
                 src="/images/kush7.jpg"
                 alt="Futuristic African City Concept"
                 className="w-full h-full object-cover scale-100 group-hover:scale-105 transition-transform duration-[2s]"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-transparent to-transparent opacity-80"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-80"></div>
               <div className="absolute bottom-0 left-0 p-8 sm:p-12">
                 <div className="text-[#C5A059] text-sm font-semibold tracking-wider uppercase mb-2">The Capital</div>
                 <h3 className="text-3xl sm:text-4xl font-playfair text-white">Meroë Innovation Hub</h3>
@@ -166,23 +171,23 @@ export default function HomePage() {
       </section>
 
       {/* Key Stats */}
-      <div className="border-y border-white/5 bg-white/[0.02]">
+      <div className="border-y border-[#C5A059]/10 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-white/5">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x divide-gray-100">
             <div className="p-2">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-1">100%</div>
+              <div className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-1">100%</div>
               <div className="text-xs md:text-sm text-[#C5A059] uppercase tracking-widest">Renewable Energy</div>
             </div>
             <div className="p-2">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-1">Zero</div>
+              <div className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-1">Zero</div>
               <div className="text-xs md:text-sm text-[#C5A059] uppercase tracking-widest">Carbon Footprint</div>
             </div>
             <div className="p-2">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-1">54+</div>
+              <div className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-1">54+</div>
               <div className="text-xs md:text-sm text-[#C5A059] uppercase tracking-widest">Nations Represented</div>
             </div>
             <div className="p-2">
-              <div className="text-3xl md:text-4xl font-bold text-white mb-1">∞</div>
+              <div className="text-3xl md:text-4xl font-bold text-[#1A1A1A] mb-1">∞</div>
               <div className="text-xs md:text-sm text-[#C5A059] uppercase tracking-widest">Potential</div>
             </div>
           </div>
@@ -190,19 +195,19 @@ export default function HomePage() {
       </div>
 
       {/* Districts */}
-      <section id="districts" className="lg:py-32 view-trigger view-active bg-[#0a0a0a] pt-20 pb-20 relative" data-view-class="view-active">
-        <div className="absolute top-1/4 left-0 w-full h-[500px] bg-gradient-to-b from-[#D80000]/5 to-transparent pointer-events-none"></div>
+      <section id="districts" className="lg:py-32 view-trigger view-active bg-[#F9F9F7] pt-20 pb-20 relative" data-view-class="view-active">
+        <div className="absolute top-1/4 left-0 w-full h-[500px] bg-gradient-to-b from-[#C5A059]/5 to-transparent pointer-events-none"></div>
         <div className="sm:px-6 lg:px-8 max-w-7xl mr-auto ml-auto pr-4 pl-4">
           <div className="view-transition opacity-0 translate-y-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 items-end gap-8 mb-16">
               <div>
                 <p className="text-sm font-medium text-[#D80000] mb-3 tracking-wider uppercase">(Our Districts)</p>
-                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-white font-playfair">
+                <h2 className="text-4xl sm:text-5xl lg:text-6xl font-semibold tracking-tight text-[#1A1A1A] font-playfair">
                   Built for <span className="text-[#C5A059] italic">prosperity.</span>
                 </h2>
               </div>
               <div className="lg:pl-8">
-                <p className="text-lg text-gray-400">
+                <p className="text-lg text-gray-600">
                   Discover the diverse zones of the Kingdom, from high-tech innovation hubs to serene residential river estates, all connected by smart infrastructure.
                 </p>
               </div>
@@ -210,7 +215,7 @@ export default function HomePage() {
 
             {/* Residential Card */}
             <div className="sticky top-28 mt-0 z-10 mx-auto max-w-6xl">
-              <div className="relative group cursor-pointer overflow-hidden rounded-3xl border border-white/10 bg-[#121212] transition-all duration-500 hover:border-[#C5A059]/50 hover:shadow-[0_0_50px_rgba(197,160,89,0.15)]">
+              <div className="relative group cursor-pointer overflow-hidden rounded-3xl border border-gray-100 bg-white transition-all duration-500 hover:border-[#C5A059]/50 hover:shadow-[0_20px_60px_rgba(197,160,89,0.15)] shadow-xl">
                 <div className="grid lg:grid-cols-2 gap-0">
                   <div className="h-[400px] lg:h-[600px] overflow-hidden relative">
                     <img
@@ -218,19 +223,18 @@ export default function HomePage() {
                       alt="Nile River Estates"
                       className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-r from-black/20 to-transparent"></div>
                   </div>
-                  <div className="p-8 lg:p-14 flex flex-col justify-center bg-[#121212]">
+                  <div className="p-8 lg:p-14 flex flex-col justify-center bg-white">
                     <div className="mb-6">
                       <div className="inline-flex items-center space-x-2 bg-[#C5A059]/10 border border-[#C5A059]/20 rounded-full px-4 py-1.5 text-[#C5A059] text-sm font-medium">
                         <span>Residential Zone</span>
                       </div>
                     </div>
-                    <h3 className="text-3xl lg:text-5xl font-semibold text-white mb-4 font-playfair">Nile River Estates</h3>
-                    <p className="text-lg text-gray-400 mb-8 leading-relaxed">
+                    <h3 className="text-3xl lg:text-5xl font-semibold text-[#1A1A1A] mb-4 font-playfair">Nile River Estates</h3>
+                    <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                       Luxury eco-villas nestled along the historic riverbanks. Experience serenity with state-of-the-art smart home integration and community organic gardens.
                     </p>
-                    <div className="grid grid-cols-2 gap-6 mb-8 text-sm text-gray-300">
+                    <div className="grid grid-cols-2 gap-6 mb-8 text-sm text-gray-600">
                       <div className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-full bg-[#D80000]/10 flex items-center justify-center text-[#D80000]">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -249,7 +253,7 @@ export default function HomePage() {
                       </div>
                     </div>
                     <div className="mt-auto">
-                      <button className="text-white border-b border-[#C5A059] pb-1 hover:text-[#C5A059] transition-colors flex items-center gap-2 group-hover:gap-4 duration-300">
+                      <button className="text-[#1A1A1A] border-b border-[#C5A059] pb-1 hover:text-[#C5A059] transition-colors flex items-center gap-2 group-hover:gap-4 duration-300 font-medium">
                         View Properties{' '}
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M5 12h14"></path>
@@ -264,7 +268,7 @@ export default function HomePage() {
 
             {/* Commercial Card */}
             <div className="sticky top-32 mt-12 z-20 mx-auto max-w-6xl">
-              <div className="relative group cursor-pointer overflow-hidden rounded-3xl border border-white/10 bg-[#121212] transition-all duration-500 hover:border-[#C5A059]/50 hover:shadow-[0_0_50px_rgba(197,160,89,0.15)]">
+              <div className="relative group cursor-pointer overflow-hidden rounded-3xl border border-gray-100 bg-white transition-all duration-500 hover:border-[#C5A059]/50 hover:shadow-[0_20px_60px_rgba(197,160,89,0.15)] shadow-xl">
                 <div className="grid lg:grid-cols-2 gap-0">
                   <div className="h-[400px] lg:h-[600px] overflow-hidden relative order-1 lg:order-2">
                     <img
@@ -272,19 +276,18 @@ export default function HomePage() {
                       alt="Trade District"
                       className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-l from-black/20 to-transparent"></div>
                   </div>
-                  <div className="p-8 lg:p-14 flex flex-col justify-center bg-[#121212] order-2 lg:order-1">
+                  <div className="p-8 lg:p-14 flex flex-col justify-center bg-white order-2 lg:order-1">
                     <div className="mb-6">
                       <div className="inline-flex items-center space-x-2 bg-[#C5A059]/10 border border-[#C5A059]/20 rounded-full px-4 py-1.5 text-[#C5A059] text-sm font-medium">
                         <span>Commercial Hub</span>
                       </div>
                     </div>
-                    <h3 className="text-3xl lg:text-5xl font-semibold text-white mb-4 font-playfair">Pan-African Trade Center</h3>
-                    <p className="text-lg text-gray-400 mb-8 leading-relaxed">
+                    <h3 className="text-3xl lg:text-5xl font-semibold text-[#1A1A1A] mb-4 font-playfair">Pan-African Trade Center</h3>
+                    <p className="text-lg text-gray-600 mb-8 leading-relaxed">
                       The economic engine of the Kingdom. A duty-free zone designed for international business, banking, and sustainable tech startups.
                     </p>
-                    <div className="grid grid-cols-2 gap-6 mb-8 text-sm text-gray-300">
+                    <div className="grid grid-cols-2 gap-6 mb-8 text-sm text-gray-600">
                       <div className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-full bg-[#D80000]/10 flex items-center justify-center text-[#D80000]">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
@@ -315,7 +318,7 @@ export default function HomePage() {
                       </div>
                     </div>
                     <div className="mt-auto">
-                      <button className="text-white border-b border-[#C5A059] pb-1 hover:text-[#C5A059] transition-colors flex items-center gap-2 group-hover:gap-4 duration-300">
+                      <button className="text-[#1A1A1A] border-b border-[#C5A059] pb-1 hover:text-[#C5A059] transition-colors flex items-center gap-2 group-hover:gap-4 duration-300 font-medium">
                         Investment Guide{' '}
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                           <path d="M5 12h14"></path>
@@ -332,14 +335,14 @@ export default function HomePage() {
       </section>
 
       {/* Citizenship Process */}
-      <section id="citizenship" className="lg:py-32 view-trigger view-active pt-20 pb-20 bg-gradient-to-b from-[#0a0a0a] to-[#110505]" data-view-class="view-active">
+      <section id="citizenship" className="lg:py-32 view-trigger view-active pt-20 pb-20 bg-gradient-to-b from-[#F9F9F7] to-white" data-view-class="view-active">
         <div className="sm:px-6 lg:px-8 max-w-7xl mr-auto ml-auto pr-4 pl-4">
           <div className="view-transition opacity-0 mb-16 translate-y-8 text-center">
             <p className="text-sm font-medium text-[#C5A059] mb-3 tracking-wider uppercase">(Your Journey)</p>
-            <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-white font-playfair mb-6">
+            <h2 className="text-4xl sm:text-5xl font-semibold tracking-tight text-[#1A1A1A] font-playfair mb-6">
               Return to <span className="text-[#D80000]">The Kingdom</span>.
             </h2>
-            <p className="text-lg text-gray-400 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
               We have streamlined the process for the diaspora to reclaim their heritage and build a future on the continent.
             </p>
           </div>
@@ -412,13 +415,13 @@ export default function HomePage() {
             ].map((step, i) => (
               <div
                 key={i}
-                className="group relative bg-[#1a1a1a] rounded-2xl p-8 border border-white/5 hover:border-[#D80000]/50 transition-all duration-300 hover:-translate-y-2"
+                className="group relative bg-white rounded-2xl p-8 border border-gray-100 hover:border-[#D80000]/50 transition-all duration-300 hover:-translate-y-2 shadow-lg hover:shadow-xl"
               >
                 <div className={`w-14 h-14 rounded-xl ${step.bg} flex items-center justify-center ${step.color} mb-6 ${step.hoverBg} ${step.hoverColor} transition-colors duration-300`}>
                   {step.icon}
                 </div>
-                <h3 className="text-xl font-bold text-white mb-3">{step.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed">{step.desc}</p>
+                <h3 className="text-xl font-bold text-[#1A1A1A] mb-3">{step.title}</h3>
+                <p className="text-gray-600 text-sm leading-relaxed">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -426,13 +429,13 @@ export default function HomePage() {
       </section>
 
       {/* News */}
-      <section className="lg:py-24 view-trigger view-active pt-16 pb-16 border-t border-white/5" data-view-class="view-active">
+      <section className="lg:py-24 view-trigger view-active pt-16 pb-16 border-t border-gray-200 bg-white" data-view-class="view-active">
         <div className="sm:px-6 lg:px-8 max-w-7xl mr-auto ml-auto pr-4 pl-4">
           <div className="flex flex-col md:flex-row justify-between items-end mb-12">
             <div>
-              <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-white font-playfair">Kingdom News</h2>
+              <h2 className="text-3xl sm:text-4xl font-semibold tracking-tight text-[#1A1A1A] font-playfair">Kingdom News</h2>
             </div>
-            <a href="#" className="text-[#C5A059] hover:text-white transition-colors mt-4 md:mt-0 flex items-center gap-2">
+            <a href="#" className="text-[#C5A059] hover:text-[#b08842] transition-colors mt-4 md:mt-0 flex items-center gap-2 font-medium">
               View all updates{' '}
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M5 12h14"></path>
@@ -465,20 +468,20 @@ export default function HomePage() {
               },
             ].map((item, i) => (
               <a key={i} href="#" className="group block">
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-4 relative">
+                <div className="aspect-[4/3] rounded-2xl overflow-hidden mb-4 relative shadow-md">
                   <img
                     src={item.img}
                     alt=""
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                   />
-                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                  <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors"></div>
                 </div>
                 <div className="flex gap-3 mb-2">
                   <span className="text-xs font-semibold text-[#D80000] uppercase tracking-wider">{item.tag}</span>
                   <span className="text-xs text-gray-500">{item.date}</span>
                 </div>
-                <h3 className="text-xl font-bold text-white group-hover:text-[#C5A059] transition-colors">{item.title}</h3>
-                <p className="text-gray-400 mt-2 text-sm line-clamp-2">{item.desc}</p>
+                <h3 className="text-xl font-bold text-[#1A1A1A] group-hover:text-[#C5A059] transition-colors">{item.title}</h3>
+                <p className="text-gray-600 mt-2 text-sm line-clamp-2">{item.desc}</p>
               </a>
             ))}
           </div>
@@ -506,17 +509,17 @@ export default function HomePage() {
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white mb-6 font-playfair">
               It&apos;s time to come home.
             </h2>
-            <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">
+            <p className="text-xl text-white/90 mb-10 max-w-2xl mx-auto">
               The Kingdom of Kush is not just a place; it is a promise. A promise of sovereignty, dignity, and prosperity for the global African family.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
               <a
                 href="#invest"
                 onClick={handleAnchorClick}
-                className="group inline-flex items-center space-x-3 bg-[#0a0a0a] text-white px-8 py-4 rounded-full font-semibold hover:bg-gray-900 hover:scale-105 transition-all duration-300 shadow-2xl"
+                className="group inline-flex items-center space-x-3 bg-white text-[#D80000] px-8 py-4 rounded-full font-semibold hover:bg-gray-100 hover:scale-105 transition-all duration-300 shadow-2xl"
               >
-                <span className="text-[#C5A059]">Apply for Citizenship</span>
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C5A059" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <span>Apply for Citizenship</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D80000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14"></path>
                   <path d="m12 5 7 7-7 7"></path>
                 </svg>
@@ -532,8 +535,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="view-trigger view-active bg-[#050505] border-[#222] border-t pt-20 pb-10" data-view-class="view-active">
+      {/* Footer - Keeping it dark for elegance/contrast or switching to light?
+          Plan said try light or keep dark. Dark footer on light theme is very common and luxurious.
+          I will keep it black but ensure gold accents pop.
+       */}
+      <footer className="view-trigger view-active bg-[#050505] border-t border-[#C5A059]/20 pt-20 pb-10" data-view-class="view-active">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="view-transition opacity-0 translate-y-8">
             <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-16">
@@ -546,7 +552,7 @@ export default function HomePage() {
                     Kingdom of <span className="text-[#C5A059]">Kush</span>
                   </span>
                 </div>
-                <p className="text-gray-500 max-w-sm mb-8 leading-relaxed">
+                <p className="text-gray-400 max-w-sm mb-8 leading-relaxed">
                   Establishing a modern, sustainable, and sovereign nation for the African diaspora. A center for trade, culture, and innovation.
                 </p>
                 <div className="flex items-center space-x-4">
@@ -554,7 +560,7 @@ export default function HomePage() {
                     <a
                       key={i}
                       href="#"
-                      className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-[#D80000] hover:bg-white/10 transition-all duration-200"
+                      className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-[#C5A059] hover:bg-white/10 transition-all duration-200"
                     >
                       <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                         {i === 0 ? (
@@ -596,12 +602,12 @@ export default function HomePage() {
             </div>
             <div className="border-t border-white/5 pt-8">
               <div className="flex flex-col lg:flex-row items-center justify-between space-y-4 lg:space-y-0">
-                <p className="text-gray-600 text-sm">© 2025 Kingdom of Kush. All rights reserved.</p>
+                <p className="text-gray-500 text-sm">© 2025 Kingdom of Kush. All rights reserved.</p>
                 <div className="flex items-center space-x-6 text-sm">
-                  <a href="#" className="text-gray-600 hover:text-white transition-colors duration-200">
+                  <a href="#" className="text-gray-500 hover:text-white transition-colors duration-200">
                     Privacy Policy
                   </a>
-                  <a href="#" className="text-gray-600 hover:text-white transition-colors duration-200">
+                  <a href="#" className="text-gray-500 hover:text-white transition-colors duration-200">
                     Terms of Service
                   </a>
                 </div>
